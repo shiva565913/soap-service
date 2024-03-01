@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="root" level="1">
+      <node name="id" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/id"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.0/@node.0/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="name" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/name"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.0/@node.1/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="age" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/age"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.0/@node.3/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="address" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/address"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.0/@node.2/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <properties key="type" value="array"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="items_id" value="http://wso2jsonschema.org/0"/>
+      <properties key="items_type" value="object"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="soapenv:Envelope" schemaDataType="OBJECT" level="1">
+      <node name="soapenv:Header" schemaDataType="STRING" level="2">
+        <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/soapenv:Header"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="soapenv:Body" schemaDataType="OBJECT" level="2">
+        <node name="dat:StudentsInsert_batch_req" level="3">
+          <node name="dat:StudentsInsert" schemaDataType="OBJECT" level="4">
+            <node name="dat:id" schemaDataType="NUMBER" level="5">
+              <properties key="namespaces" value="{prefix=dat, url=http://ws.wso2.org/dataservice}"/>
+              <properties key="type" value="number"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:id"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode incomingLink="//@input/@treeNode.0/@node.0/@outNode/@outgoingLink.0"/>
+            </node>
+            <node name="dat:name" schemaDataType="STRING" level="5">
+              <properties key="namespaces" value="{prefix=dat, url=http://ws.wso2.org/dataservice}"/>
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:name"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode incomingLink="//@input/@treeNode.0/@node.1/@outNode/@outgoingLink.0"/>
+            </node>
+            <node name="dat:address" schemaDataType="STRING" level="5">
+              <properties key="namespaces" value="{prefix=dat, url=http://ws.wso2.org/dataservice}"/>
+              <properties key="type" value="string"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:address"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode incomingLink="//@input/@treeNode.0/@node.3/@outNode/@outgoingLink.0"/>
+            </node>
+            <node name="dat:age" schemaDataType="NUMBER" level="5">
+              <properties key="namespaces" value="{prefix=dat, url=http://ws.wso2.org/dataservice}"/>
+              <properties key="type" value="number"/>
+              <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:age"/>
+              <properties key="nullable" value="false"/>
+              <outNode/>
+              <inNode incomingLink="//@input/@treeNode.0/@node.2/@outNode/@outgoingLink.0"/>
+            </node>
+            <properties key="namespaces" value="{prefix=dat, url=http://ws.wso2.org/dataservice}"/>
+            <properties key="type" value="object"/>
+            <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert"/>
+            <properties key="nullable" value="false"/>
+            <properties key="properties_id" value="{dat:id={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:id, type=number}, dat:name={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:name, type=string}, dat:address={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:address, type=string}, dat:age={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:age, type=number}}"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=dat, url=http://ws.wso2.org/dataservice}"/>
+          <properties key="type" value="array"/>
+          <properties key="id" value="http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{dat:StudentsInsert={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert, type=object, properties={dat:id={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:id, type=number}, dat:name={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:name, type=string}, dat:address={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:address, type=string}, dat:age={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:age, type=number}}}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/soapenv:Body"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{dat:StudentsInsert_batch_req={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req, type=array, items=[{id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0, type=object, properties={dat:StudentsInsert={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert, type=object, properties={dat:id={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:id, type=number}, dat:name={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:name, type=string}, dat:address={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:address, type=string}, dat:age={id=http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:age, type=number}}}}}]}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/},{prefix=dat, url=http://ws.wso2.org/dataservice}"/>
+      <properties key="namespaces" value="{prefix=soapenv, url=http://schemas.xmlsoap.org/soap/envelope/}"/>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+</datamapper:DataMapperRoot>

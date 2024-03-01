@@ -1,0 +1,26 @@
+<data transports="http https" serviceGroup="" serviceNamespace="" name="data" enableBatchRequests="true">
+  <description />
+  <config id="InsertData">
+    <property name="driverClassName">org.postgresql.Driver</property>
+    <property name="url">jdbc:postgresql://10.175.1.21:5432/wso2userdb</property>
+    <property name="username">wso2user</property>
+    <property name="password">578R333nMa</property>
+  </config>
+  <query id="insertStdData" useConfig="InsertData">
+    <sql>INSERT INTO wso2userdb.public.studentdata
+(id, name, age, address)
+VALUES(:id, :name, :age, :address);</sql>
+    <param type="IN" name="id" paramType="SCALAR" sqlType="INTEGER" optional="false" />
+    <param type="IN" name="name" paramType="SCALAR" sqlType="STRING" optional="false" />
+    <param type="IN" name="age" paramType="SCALAR" sqlType="INTEGER" optional="false" />
+    <param type="IN" name="address" paramType="SCALAR" sqlType="STRING" optional="false" />
+  </query>
+  <operation name="studentData" returnRequestStatus="true">
+    <call-query href="insertStdData">
+      <with-param name="id" query-param="id" />
+      <with-param name="name" query-param="name" />
+      <with-param name="age" query-param="age" />
+      <with-param name="address" query-param="address" />
+    </call-query>
+  </operation>
+</data>

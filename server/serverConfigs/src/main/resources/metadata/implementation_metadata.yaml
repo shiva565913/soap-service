@@ -1,0 +1,11 @@
+---
+key: "implementation-1.0.0"
+name : "implementation"
+displayName : "implementation"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/sd"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sd" name="implementation" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log level="full"/>
+            <datamapper config="gov:datamapper/NewConfig.dmc" inputSchema="gov:datamapper/NewConfig_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/NewConfig_outputSchema.json" outputType="XML" xsltStyleSheet="gov:datamapper/NewConfig_xsltStyleSheet.xml"/>
+            <header name="Action" scope="default" value="urn:studentData_batch_req"/>
+            <call>
+                <endpoint key="DataEP"/>
+            </call>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+	"message": "The data has inserted successfully"&#xd;
+}</format>
+                <args/>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

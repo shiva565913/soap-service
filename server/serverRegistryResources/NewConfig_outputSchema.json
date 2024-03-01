@@ -1,0 +1,58 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "outputType" : "XML",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "soapenv:Envelope",
+  "type" : "object",
+  "properties" : {
+    "soapenv:Header" : {
+      "id" : "http://wso2jsonschema.org/soapenv:Header",
+      "type" : "string"
+    },
+    "soapenv:Body" : {
+      "id" : "http://wso2jsonschema.org/soapenv:Body",
+      "type" : "object",
+      "properties" : {
+        "dat:StudentsInsert_batch_req" : {
+          "id" : "http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req",
+          "type" : "array",
+          "items" : [ {
+            "id" : "http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0",
+            "type" : "object",
+            "properties" : {
+              "dat:StudentsInsert" : {
+                "id" : "http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert",
+                "type" : "object",
+                "properties" : {
+                  "dat:id" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:id",
+                    "type" : "number"
+                  },
+                  "dat:name" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:name",
+                    "type" : "string"
+                  },
+                  "dat:address" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:address",
+                    "type" : "string"
+                  },
+                  "dat:age" : {
+                    "id" : "http://wso2jsonschema.org/soapenv:Body/dat:StudentsInsert_batch_req/0/dat:StudentsInsert/dat:age",
+                    "type" : "number"
+                  }
+                }
+              }
+            }
+          } ]
+        }
+      }
+    }
+  },
+  "namespaces" : [ {
+    "prefix" : "soapenv",
+    "url" : "http://schemas.xmlsoap.org/soap/envelope/"
+  }, {
+    "prefix" : "dat",
+    "url" : "http://ws.wso2.org/dataservice"
+  } ]
+}

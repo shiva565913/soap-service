@@ -1,0 +1,28 @@
+map_S_root_S_Envelope = function(){ 
+var outputsoapenv_Envelope={};
+
+var count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673 = 0;
+outputsoapenv_Envelope =  {};
+outputsoapenv_Envelope.soapenv_Body =  {};
+outputsoapenv_Envelope.soapenv_Body.dat_StudentsInsert_batch_req =  [];
+
+for(i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673 in inputroot){
+outputsoapenv_Envelope.soapenv_Body.dat_StudentsInsert_batch_req[count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673] =  {};
+outputsoapenv_Envelope.soapenv_Body.dat_StudentsInsert_batch_req[count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].dat_StudentsInsert =  {};
+outputsoapenv_Envelope.soapenv_Body.dat_StudentsInsert_batch_req[count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].dat_StudentsInsert.dat_id = Number(inputroot[i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].id);
+outputsoapenv_Envelope.soapenv_Body.dat_StudentsInsert_batch_req[count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].dat_StudentsInsert.dat_name = inputroot[i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].name;
+outputsoapenv_Envelope.soapenv_Body.dat_StudentsInsert_batch_req[count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].dat_StudentsInsert.dat_address = inputroot[i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].address;
+outputsoapenv_Envelope.soapenv_Body.dat_StudentsInsert_batch_req[count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].dat_StudentsInsert.dat_age = Number(inputroot[i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673].age);
+
+count_i_inputroot_e7125179_a012_40ef_90c2_6c36059b3673++;
+}
+return outputsoapenv_Envelope;
+};
+
+
+
+
+
+
+
+
